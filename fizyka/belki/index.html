@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator belki</title>
+    <script src="assets/sweetalert2/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="assets/sweetalert2/sweetalert2.min.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="shortcut icon" href="assets/belka.png" />
+  </head>
+  <body>
+    <h1>Kalkulator Belki</h1>
+
+    <div class="flex-container">
+      <div class="centered-div inputs">
+        <label for="mass">Masa (kg): </label>
+        <input type="number" id="mass" value="100" min="0" /><br /><br />
+
+        <label for="length">Długość belki (m): </label>
+        <input type="number" id="length" value="100" min="0" /><br /><br />
+
+        <label for="Xa">X<sub>A</sub> (m): </label>
+        <input type="number" id="Xa" value="0" min="0" /><br /><br />
+
+        <label for="Xb">X<sub>B</sub> (m): </label>
+        <input type="number" id="Xb" value="0" min="0" /><br /><br />
+      </div>
+
+      <div class="centered-div output">
+        <h2>Wyniki:</h2>
+        <p>R<sub>A</sub>: <span id="Ra">N/A</span> N</p>
+        <p>R<sub>B</sub>: <span id="Rb">N/A</span> N</p>
+      </div>
+    </div>
+
+    <div class="belka-container">
+      <div class="belka">
+        <span class="length-label"></span>
+        <span class="mass-label"></span>
+      </div>
+      <div class="triangle tA" id="triangleA"></div>
+      <div class="triangle tB" id="triangleB"></div>
+    </div>
+
+    <button class="button-17" role="button" id="infoButton"></button>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/trojkaty.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKADEMIAMAZOWIECKASMIERDZI</title>
+    <link rel="shortcut icon" href="assets/obama.jpg">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="center-div">
+        <div class="p-list">
+            <div class="p-header">
+                <h3 class="text-up">AKADEMIAMAZOWIECKASMIERDZI.PL</h3>
+            </div>
+            <div class="p-dropdown">
+                <span>Fizyka</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                    <path d="M7 10l5 5 5-5z"/>
+                </svg>
+            </div>
+            <div class="p-elements">
+                <div class="p-element"><a href="fizyka/belki/">Kalkulator Belki</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const dropdown = document.querySelector('.p-dropdown');
+        const elements = document.querySelector('.p-elements');
+        
+        dropdown.addEventListener('click', () => {
+            dropdown.classList.toggle('open');
+            elements.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
