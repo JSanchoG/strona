@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napięcie Skuteczne</title>
+    <link rel="shortcut icon" href="assets/obama.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Napięcia</h1>
+
+        <div class="borders">
+            <div class="row">
+                <div class="input-group">
+                    <label for="numTurnsInput">Liczba zwojów:</label>
+                    <input type="number" tabindex="1" id="numTurnsInput" value="100" min="1">
+                    <input type="range" id="numTurnsSlider" min="0" max="100" step="1" value="100">
+                </div>
+                <div class="input-group">
+                    <label for="areaInput">Pole ramki (m²):</label>
+                    <input type="number" tabindex="2" id="areaInput" value="0.1" min="0.01" step="0.01">
+                    <input type="range" id="areaSlider" min="0" max="0.1" step="0.01" value="0.1">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="input-group">
+                    <label for="frequencyInput">Częstotliwość obrotu (Hz):</label>
+                    <input type="number" tabindex="3" id="frequencyInput" value="50" min="1" step="1">
+                    <input type="range" id="frequencySlider" min="0" max="50" step="1" value="50">
+                </div>
+                <div class="input-group">
+                    <label for="magneticFieldInput">Wartość pola (Tesla):</label>
+                    <input type="number" tabindex="4" id="magneticFieldInput" value="1" min="0.1" step="0.1">
+                    <input type="range" id="magneticFieldSlider" min="0" max="1" step="0.1" value="1">
+                </div>
+            </div>
+        </div>
+
+        <div id="result"></div>
+        <canvas id="voltageChart"></canvas>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
