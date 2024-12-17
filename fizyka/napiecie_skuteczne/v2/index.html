@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napięcie Skuteczne</title>
+    <link rel="shortcut icon" href="../../assets/obama.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Napięcia</h1>
+
+        <div id="inputs">
+            <div class="borders inputBox" id="i-1">
+                <div class="row">
+                    <div class="input-group">
+                        <label for="numTurnsInput1">Liczba zwojów:</label>
+                        <input type="number" tabindex="1" id="numTurnsInput1" value="100" min="1">
+                        <input type="range" class="slider-blue" id="numTurnsSlider1" min="0" max="100" step="1" value="100">
+                    </div>
+                    <div class="input-group">
+                        <label for="areaInput1">Pole ramki (m²):</label>
+                        <input type="number" tabindex="2" id="areaInput1" value="0.1" min="0.01" step="0.01">
+                        <input type="range" class="slider-blue" id="areaSlider1" min="0" max="0.1" step="0.01" value="0.1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="frequencyInput1">Częstotliwość obrotu (Hz):</label>
+                        <input type="number" tabindex="3" id="frequencyInput1" value="50" min="1" step="1">
+                        <input type="range" class="slider-blue" id="frequencySlider1" min="0" max="50" step="0.1" value="50">
+                    </div>
+                    <div class="input-group">
+                        <label for="magneticFieldInput1">Wartość pola (Tesla):</label>
+                        <input type="number" tabindex="4" id="magneticFieldInput1" value="1" min="0.1" step="0.1">
+                        <input type="range" class="slider-blue" id="magneticFieldSlider1" min="0" max="1" step="0.01" value="1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="borders inputBox" id="i-2">
+                <div class="row">
+                    <div class="input-group">
+                        <label for="numTurnsInput2">Liczba zwojów:</label>
+                        <input type="number" tabindex="1" id="numTurnsInput2" value="100" min="1">
+                        <input type="range" class="slider-red" id="numTurnsSlider2" min="0" max="100" step="1" value="100">
+                    </div>
+                    <div class="input-group">
+                        <label for="areaInput2">Pole ramki (m²):</label>
+                        <input type="number" tabindex="2" id="areaInput2" value="0.1" min="0.01" step="0.01">
+                        <input type="range" class="slider-red" id="areaSlider2" min="0" max="0.1" step="0.01" value="0.1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="frequencyInput2">Częstotliwość obrotu (Hz):</label>
+                        <input type="number" tabindex="3" id="frequencyInput2" value="25" min="1" step="1">
+                        <input type="range" class="slider-red" id="frequencySlider2" min="0" max="25" step="0.1" value="25">
+                    </div>
+                    <div class="input-group">
+                        <label for="magneticFieldInput2">Wartość pola (Tesla):</label>
+                        <input type="number" tabindex="4" id="magneticFieldInput2" value="1" min="0.1" step="0.1">
+                        <input type="range" class="slider-red" id="magneticFieldSlider2" min="0" max="1" step="0.01" value="1">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="containerW">
+            <div class="left" id="resultL"></div>
+            <div class="right" id="resultR"></div>
+        </div>
+        
+        <canvas id="voltageChart"></canvas>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
